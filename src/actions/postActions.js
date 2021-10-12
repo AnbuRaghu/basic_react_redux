@@ -1,10 +1,10 @@
 import { FETCH_POSTS, NEW_POST } from './types';
-
+//thunk allows us to make dispatch call so we can return another function called dispatch
 export const fetchPosts = () => dispatch => {
   fetch('https://jsonplaceholder.typicode.com/posts')
     .then(res => res.json())
     .then(posts =>
-      dispatch({
+      dispatch({//dispatching data (action) to reducer
         type: FETCH_POSTS,
         payload: posts
       })

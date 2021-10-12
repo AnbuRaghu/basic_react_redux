@@ -1,7 +1,7 @@
 import { createStore, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
 import rootReducer from './reducers';
-
+//compose is to wrap multiple enhancer
 const initialState = {};
 
 const middleware = [thunk];

@@ -31,14 +31,15 @@ class Posts extends Component {
 }
 
 Posts.propTypes = {
-  fetchPosts: PropTypes.func.isRequired,
+  fetchPosts: PropTypes.func.isRequired,// we set the fetcpost as function type
   posts: PropTypes.array.isRequired,
   newPost: PropTypes.object
 };
-
+// we can get state from redux and map its property to the componenet
 const mapStateToProps = state => ({
   posts: state.posts.items,
   newPost: state.posts.item
 });
 
 export default connect(mapStateToProps, { fetchPosts })(Posts);
+//connect connects our component to your redux store
